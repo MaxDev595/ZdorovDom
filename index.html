@@ -1,0 +1,2601 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zdorov Dom - Premium Construction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link id="heading-font-link"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link id="body-font-link" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['var(--font-heading-name)', 'sans-serif'],
+                        body: ['var(--font-body-name)', 'sans-serif'],
+                    },
+                    spacing: {
+                        base: 'var(--space-base)',
+                    },
+                    borderRadius: {
+                        small: 'var(--radius-small)',
+                        large: 'var(--radius-large)',
+                    },
+                    boxShadow: {
+                        custom: 'var(--shadow-custom)',
+                        'custom-hover': 'var(--shadow-custom-hover)',
+                    },
+                    colors: {
+                        background: {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            900: '#111827',
+                        },
+                        primary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316', // Orange Accent
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        },
+                        neutral: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a', // Dark Gray
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            /* Typography */
+            --font-heading-name: 'Manrope';
+            --font-body-name: 'Inter';
+            --font-heading: 'Manrope', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --letter-spacing-heading: -0.02em;
+            --letter-spacing-body: 0px;
+
+            /* Spacing */
+            --space-base: 1rem;
+
+            /* Borders */
+            --radius-small: 4px;
+            --radius-large: 12px;
+            --border-width: 1px;
+
+            /* Shadows */
+            --shadow-color: 15 23 42;
+            --shadow-offset-x: 0px;
+            --shadow-offset-y: 4px;
+            --shadow-blur: 20px;
+            --shadow-spread: -2px;
+            --shadow-opacity: 0.08;
+            --shadow-custom: 0px 4px 20px -2px rgba(var(--shadow-color), var(--shadow-opacity));
+            --shadow-custom-hover: 0px 10px 25px -5px rgba(var(--shadow-color), 0.15);
+        }
+
+        html,
+        body {
+            height: auto;
+            min-height: 100%;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar for premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body
+    class="font-body bg-background-50 text-neutral-900 antialiased selection:bg-primary-100 selection:text-primary-900">
+
+    <!-- Navigation -->
+    <header
+        class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <a href="index.html"><img src="img/логотип чб англ.png" alt="Zdorov Dom" class="h-14 w-auto"></a>
+                    <span class="sr-only">ZDOROV DOM</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="services.html"
+                        class="text-neutral-600 hover:text-primary-600 font-medium transition-colors text-sm uppercase tracking-wide">Услуги</a>
+                    <a href="projects.html"
+                        class="text-neutral-600 hover:text-primary-600 font-medium transition-colors text-sm uppercase tracking-wide">Проекты</a>
+                    <a href="about.html"
+                        class="text-neutral-600 hover:text-primary-600 font-medium transition-colors text-sm uppercase tracking-wide">О
+                        компании</a>
+                    <a href="#reviews"
+                        class="text-neutral-600 hover:text-primary-600 font-medium transition-colors text-sm uppercase tracking-wide">Отзывы</a>
+                    <a href="contacts.html"
+                        class="text-neutral-600 hover:text-primary-600 font-medium transition-colors text-sm uppercase tracking-wide">Контакты</a>
+                </nav>
+
+                <!-- CTA & Phone -->
+                <div class="hidden md:flex items-center gap-6">
+                    <div class="flex flex-col items-end">
+                        <a href="tel:+79150462686"
+                            class="font-heading font-bold text-neutral-900 text-lg hover:text-primary-600 transition-colors">+7
+                            (915) 046-26-86</a>
+                        <span class="text-xs text-neutral-500">Ежедневно с 9:00 до 21:00</span>
+                    </div>
+                    <button onclick="openCallback()"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-small font-medium transition-all shadow-lg shadow-primary-500/30 transform hover:-translate-y-0.5">
+                        Заказать звонок
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-neutral-900 hover:text-primary-600 focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1757359056339-22968344cce6?q=80&w=2088&auto=format&fit=crop"
+                alt="Современный загородный дом" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-neutral-900/90 via-neutral-900/70 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
+                    <span class="w-2 h-2 rounded-full bg-primary-500"></span>
+                    Строим будущее вашей семьи
+                </div>
+                <h1 class="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                    Дома, в которых <br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-primary-600">хочется
+                        жить</span>
+                </h1>
+                <p class="text-lg md:text-xl text-neutral-300 mb-10 leading-relaxed max-w-lg">
+                    Проектирование и строительство загородных домов «под ключ» с гарантией 10 лет. Современные
+                    технологии и экологичные материалы.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#projects"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-small font-bold text-lg transition-all shadow-lg shadow-primary-500/30 text-center">
+                        Смотреть проекты
+                    </a>
+                    <a href="#calculate"
+                        class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white px-8 py-4 rounded-small font-bold text-lg transition-all text-center">
+                        Рассчитать стоимость
+                    </a>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="mt-12 flex items-center gap-8 pt-8 border-t border-white/10">
+                    <div>
+                        <p class="font-heading text-3xl font-bold text-white">150+</p>
+                        <p class="text-sm text-neutral-400">Построенных домов</p>
+                    </div>
+                    <div>
+                        <p class="font-heading text-3xl font-bold text-white">12 лет</p>
+                        <p class="text-sm text-neutral-400">На рынке</p>
+                    </div>
+                    <div>
+                        <p class="font-heading text-3xl font-bold text-white">100%</p>
+                        <p class="text-sm text-neutral-400">Соблюдение сроков</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="py-20 bg-white relative z-20 -mt-10 rounded-t-[40px] shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Почему выбирают нас</h2>
+                <p class="text-neutral-600 max-w-2xl mx-auto">Мы не просто строим дома, мы создаем пространство для
+                    комфортной жизни, продумывая каждую деталь.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Advantage 1 -->
+                <div
+                    class="group p-8 bg-background-50 rounded-large hover:bg-white hover:shadow-custom transition-all duration-300 border border-transparent hover:border-neutral-100">
+                    <div
+                        class="w-14 h-14 bg-primary-100 rounded-small flex items-center justify-center text-primary-600 mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Minimalistic warranty icon -->
+                        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 5.5 12 3l5 2.5v5.5c0 3.6-2.1 6-5 7-2.9-1-5-3.4-5-7z" />
+                            <path d="m9 11.5 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Гарантия 10 лет</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Мы уверены в качестве наших работ и материалов,
+                        поэтому даем расширенную гарантию.</p>
+                </div>
+
+                <!-- Advantage 2 -->
+                <div
+                    class="group p-8 bg-background-50 rounded-large hover:bg-white hover:shadow-custom transition-all duration-300 border border-transparent hover:border-neutral-100">
+                    <div
+                        class="w-14 h-14 bg-primary-100 rounded-small flex items-center justify-center text-primary-600 mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Minimalistic time icon -->
+                        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="7" />
+                            <path d="M12 9v4l2.5 1.5" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Точно в срок</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Фиксируем сроки в договоре и платим штрафы за
+                        каждый день просрочки.</p>
+                </div>
+
+                <!-- Advantage 3 -->
+                <div
+                    class="group p-8 bg-background-50 rounded-large hover:bg-white hover:shadow-custom transition-all duration-300 border border-transparent hover:border-neutral-100">
+                    <div
+                        class="w-14 h-14 bg-primary-100 rounded-small flex items-center justify-center text-primary-600 mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Minimalistic budget icon -->
+                        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="7" width="16" height="10" rx="2" />
+                            <path d="M9 7v-1.5a1.5 1.5 0 0 1 1.5-1.5H16" />
+                            <circle cx="15" cy="12" r="1.3" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Фиксированная смета</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Стоимость строительства не меняется в процессе
+                        работ. Никаких скрытых платежей.</p>
+                </div>
+
+                <!-- Advantage 4 -->
+                <div
+                    class="group p-8 bg-background-50 rounded-large hover:bg-white hover:shadow-custom transition-all duration-300 border border-transparent hover:border-neutral-100">
+                    <div
+                        class="w-14 h-14 bg-primary-100 rounded-small flex items-center justify-center text-primary-600 mb-6 group-hover:scale-110 transition-transform">
+                        <!-- Minimalistic team icon -->
+                        <svg viewBox="0 0 24 24" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.6"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="10" r="2.6" />
+                            <path d="M4.8 17a4.4 4.4 0 0 1 4.2-2.8 4.4 4.4 0 0 1 4.2 2.8" />
+                            <circle cx="16.5" cy="11" r="2" />
+                            <path d="M14.3 16.2A3.4 3.4 0 0 1 19 18" />
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-neutral-900 mb-3">Свои бригады</h3>
+                    <p class="text-neutral-600 text-sm leading-relaxed">Штат квалифицированных строителей с опытом
+                        работы от 7 лет. Без посредников.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 1 -->
+    <section class="py-12 bg-primary-50 border-y border-primary-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="font-heading text-xl md:text-2xl font-bold text-neutral-900 mb-1">Бесплатная консультация</h3>
+                    <p class="text-neutral-600 text-sm">Ответим на все вопросы и подберём оптимальный вариант под ваш бюджет</p>
+                </div>
+                <button onclick="openCallback()" class="flex-shrink-0 bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-small font-bold transition-all shadow-lg shadow-primary-500/25">
+                    Заказать звонок
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-background-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <span class="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Наши
+                        услуги</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900">Комплексный подход к
+                        строительству</h2>
+                </div>
+                <a href="#"
+                    class="hidden md:flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors mt-4 md:mt-0">
+                    Все услуги <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="group relative overflow-hidden rounded-large h-96 shadow-custom">
+                    <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=1000&auto=format&fit=crop"
+                        alt="Проектирование"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Проектирование</h3>
+                        <p
+                            class="text-neutral-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            Индивидуальные архитектурные решения и адаптация готовых проектов под ваш участок.</p>
+                        <span
+                            class="inline-flex items-center text-white font-medium text-sm group-hover:text-primary-400 transition-colors">
+                            Подробнее <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group relative overflow-hidden rounded-large h-96 shadow-custom">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop"
+                        alt="Строительство"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Строительство домов</h3>
+                        <p
+                            class="text-neutral-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            Возведение домов из кирпича, газобетона и клееного бруса под ключ.</p>
+                        <span
+                            class="inline-flex items-center text-white font-medium text-sm group-hover:text-primary-400 transition-colors">
+                            Подробнее <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group relative overflow-hidden rounded-large h-96 shadow-custom">
+                    <img src="https://images.unsplash.com/photo-1760072513442-9872656c1b07?q=80&w=1000&auto=format&fit=crop"
+                        alt="Внутренняя отделка"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-neutral-900/40 to-transparent">
+                    </div>
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <h3 class="font-heading text-2xl font-bold text-white mb-2">Внутренняя отделка</h3>
+                        <p
+                            class="text-neutral-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                            Дизайнерский ремонт, разводка коммуникаций и финишная отделка помещений.</p>
+                        <span
+                            class="inline-flex items-center text-white font-medium text-sm group-hover:text-primary-400 transition-colors">
+                            Подробнее <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-center md:hidden">
+                <a href="#"
+                    class="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors">
+                    Все услуги <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Портфолио</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-6">Популярные проекты</h2>
+
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4">
+                    <button
+                        class="px-6 py-2 rounded-full bg-neutral-900 text-white font-medium text-sm transition-all shadow-lg shadow-neutral-900/20">Все
+                        проекты</button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 font-medium text-sm transition-all">Одноэтажные</button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 font-medium text-sm transition-all">Двухэтажные</button>
+                    <button
+                        class="px-6 py-2 rounded-full bg-neutral-100 text-neutral-600 hover:bg-neutral-200 font-medium text-sm transition-all">С
+                        гаражом</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div
+                    class="group bg-white rounded-large overflow-hidden border border-neutral-200 hover:shadow-custom-hover transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <span
+                            class="absolute top-4 left-4 bg-primary-600 text-white text-xs font-bold px-3 py-1 rounded-small z-10">ХИТ
+                            ПРОДАЖ</span>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Проект Альпина"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-neutral-900">Проект «Альпина»</h3>
+                                <p class="text-neutral-500 text-sm">Современный хай-тек</p>
+                            </div>
+                            <span class="text-primary-600 font-bold text-lg">от 5.2 млн ₽</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 py-4 border-t border-b border-neutral-100 mb-4">
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="maximize" class="w-4 h-4 text-neutral-400"></i> 145 м²
+                            </div>
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="bed" class="w-4 h-4 text-neutral-400"></i> 3 спальни
+                            </div>
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="bath" class="w-4 h-4 text-neutral-400"></i> 2 с/у
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full py-3 border border-neutral-900 text-neutral-900 font-medium rounded-small hover:bg-neutral-900 hover:text-white transition-colors">
+                            Смотреть планировку
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div
+                    class="group bg-white rounded-large overflow-hidden border border-neutral-200 hover:shadow-custom-hover transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1000&auto=format&fit=crop"
+                            alt="Проект Скандинавия"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-neutral-900">Проект «Скандинавия»</h3>
+                                <p class="text-neutral-500 text-sm">Классический стиль</p>
+                            </div>
+                            <span class="text-primary-600 font-bold text-lg">от 4.8 млн ₽</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 py-4 border-t border-b border-neutral-100 mb-4">
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="maximize" class="w-4 h-4 text-neutral-400"></i> 120 м²
+                            </div>
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="bed" class="w-4 h-4 text-neutral-400"></i> 3 спальни
+                            </div>
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="bath" class="w-4 h-4 text-neutral-400"></i> 1 с/у
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full py-3 border border-neutral-900 text-neutral-900 font-medium rounded-small hover:bg-neutral-900 hover:text-white transition-colors">
+                            Смотреть планировку
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div
+                    class="group bg-white rounded-large overflow-hidden border border-neutral-200 hover:shadow-custom-hover transition-all duration-300">
+                    <div class="relative h-64 overflow-hidden">
+                        <span
+                            class="absolute top-4 left-4 bg-neutral-900 text-white text-xs font-bold px-3 py-1 rounded-small z-10">PREMIUM</span>
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1000&auto=format&fit=crop"
+                            alt="Проект Престиж"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-heading text-xl font-bold text-neutral-900">Проект «Престиж»</h3>
+                                <p class="text-neutral-500 text-sm">Райт стиль</p>
+                            </div>
+                            <span class="text-primary-600 font-bold text-lg">от 8.5 млн ₽</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 py-4 border-t border-b border-neutral-100 mb-4">
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="maximize" class="w-4 h-4 text-neutral-400"></i> 210 м²
+                            </div>
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="bed" class="w-4 h-4 text-neutral-400"></i> 4 спальни
+                            </div>
+                            <div class="flex items-center gap-1.5 text-neutral-600 text-sm">
+                                <i data-lucide="bath" class="w-4 h-4 text-neutral-400"></i> 3 с/у
+                            </div>
+                        </div>
+
+                        <button
+                            class="w-full py-3 border border-neutral-900 text-neutral-900 font-medium rounded-small hover:bg-neutral-900 hover:text-white transition-colors">
+                            Смотреть планировку
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#"
+                    class="inline-block bg-neutral-900 hover:bg-neutral-800 text-white px-8 py-4 rounded-small font-bold text-lg transition-all shadow-lg shadow-neutral-900/20">
+                    Смотреть весь каталог
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 2 -->
+    <section class="py-12 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="font-heading text-xl md:text-2xl font-bold mb-1">Рассчитаем стоимость дома под ключ</h3>
+                    <p class="text-neutral-400 text-sm">Укажите параметры — получите предварительную смету за 15 минут</p>
+                </div>
+                <a href="#calculate" class="flex-shrink-0 bg-primary-600 hover:bg-primary-500 text-white px-8 py-3 rounded-small font-bold transition-all shadow-lg shadow-primary-500/30 inline-block text-center">
+                    Получить расчёт
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="py-20 bg-neutral-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <span class="text-primary-500 font-bold tracking-wider uppercase text-sm mb-2 block">Процесс
+                        работы</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Как мы строим ваш <br />идеальный дом
+                    </h2>
+                    <p class="text-neutral-400 mb-8 leading-relaxed">Прозрачный процесс от первой встречи до вручения
+                        ключей. Мы берем на себя все заботы по организации строительства.</p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center font-bold text-white">
+                                1</div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold mb-1">Встреча и проектирование</h4>
+                                <p class="text-neutral-400 text-sm">Обсуждаем детали, выбираем проект или создаем
+                                    индивидуальный, составляем смету.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center font-bold text-white">
+                                2</div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold mb-1">Договор и фундамент</h4>
+                                <p class="text-neutral-400 text-sm">Подписываем договор, фиксируем цену, завозим
+                                    материалы и начинаем работы.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center font-bold text-white">
+                                3</div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold mb-1">Строительство коробки</h4>
+                                <p class="text-neutral-400 text-sm">Возводим стены, перекрытия и кровлю. Вы получаете
+                                    фотоотчеты на каждом этапе.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="flex-shrink-0 w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center font-bold text-white">
+                                4</div>
+                            <div>
+                                <h4 class="font-heading text-lg font-bold mb-1">Отделка и сдача</h4>
+                                <p class="text-neutral-400 text-sm">Проводим коммуникации, делаем отделку, убираем мусор
+                                    и вручаем вам ключи.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 relative">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary-600/20 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1000&auto=format&fit=crop"
+                        alt="Процесс строительства"
+                        class="relative z-10 rounded-large shadow-2xl border border-neutral-700 w-full object-cover h-[600px]">
+
+                    <!-- Floating Card -->
+                    <div
+                        class="absolute bottom-8 left-8 z-20 bg-white p-4 rounded-large shadow-xl max-w-xs hidden sm:block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                            <span class="text-neutral-900 font-bold text-sm">Прямо сейчас</span>
+                        </div>
+                        <p class="text-neutral-600 text-xs">Ведем строительство 12 объектов в Московской области</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-background-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-neutral-900 mb-4">Отзывы наших клиентов</h2>
+                <p class="text-neutral-600 max-w-2xl mx-auto">Реальные истории людей, которые уже живут в домах своей
+                    мечты.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-large shadow-sm border border-neutral-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-neutral-600 mb-6 text-sm leading-relaxed">"Очень довольны работой компании. Дом
+                        построили за 4 месяца, как и обещали. Бригада работала аккуратно, на участке всегда был порядок.
+                        Рекомендую!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
+                            alt="Алексей" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-neutral-900 text-sm">Алексей Смирнов</h4>
+                            <p class="text-neutral-400 text-xs">Проект «Альпина»</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-large shadow-sm border border-neutral-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-neutral-600 mb-6 text-sm leading-relaxed">"Долго выбирали подрядчика, остановились на
+                        Zdorov Dom из-за прозрачной сметы. Ни разу не пожалели. Качество материалов отличное, прораб
+                        всегда на связи."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop"
+                            alt="Марина" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-neutral-900 text-sm">Марина Ковалева</h4>
+                            <p class="text-neutral-400 text-xs">Проект «Скандинавия»</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-large shadow-sm border border-neutral-100">
+                    <div class="flex items-center gap-1 text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                    <p class="text-neutral-600 mb-6 text-sm leading-relaxed">"Спасибо за наш уютный дом! Отдельное
+                        спасибо архитектору за то, что учел все наши пожелания по планировке. Живем уже полгода, все
+                        отлично."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
+                            alt="Дмитрий" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="font-bold text-neutral-900 text-sm">Дмитрий Волков</h4>
+                            <p class="text-neutral-400 text-xs">Индивидуальный проект</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner 3 -->
+    <section class="py-12 bg-white border-t border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div>
+                    <h3 class="font-heading text-xl md:text-2xl font-bold text-neutral-900 mb-1">Гарантия 10 лет на все работы</h3>
+                    <p class="text-neutral-600 text-sm">Уверены в качестве — даём расширенную гарантию на конструкции и отделку</p>
+                </div>
+                <a href="projects.html" class="flex-shrink-0 border-2 border-neutral-900 text-neutral-900 hover:bg-neutral-900 hover:text-white px-8 py-3 rounded-small font-bold transition-all inline-block text-center">
+                    Смотреть проекты
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacts" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-neutral-900 rounded-large overflow-hidden shadow-2xl">
+                <div class="flex flex-col lg:flex-row">
+                    <!-- Contact Info & Form -->
+                    <div class="w-full lg:w-1/2 p-8 md:p-12 lg:p-16">
+                        <h2 class="font-heading text-3xl font-bold text-white mb-6">Остались вопросы?</h2>
+                        <p class="text-neutral-400 mb-8">Оставьте заявку на бесплатную консультацию. Мы перезвоним в
+                            течение 15 минут и ответим на все вопросы.</p>
+
+                        <form class="space-y-4 mb-10">
+                            <div>
+                                <input type="text" placeholder="Ваше имя"
+                                    class="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-small focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition-all">
+                            </div>
+                            <div>
+                                <input type="tel" placeholder="+7 (___) ___-__-__"
+                                    class="w-full bg-neutral-800 border border-neutral-700 text-white px-4 py-3 rounded-small focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600 transition-all">
+                            </div>
+                            <button type="button"
+                                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 rounded-small transition-all shadow-lg shadow-primary-600/20">
+                                Получить консультацию
+                            </button>
+                            <p class="text-xs text-neutral-500 text-center">Нажимая кнопку, вы соглашаетесь с политикой
+                                конфиденциальности</p>
+                        </form>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t border-neutral-800">
+                            <div>
+                                <p class="text-neutral-500 text-xs uppercase tracking-wider mb-1">Телефон</p>
+                                <a href="tel:+79150462686"
+                                    class="text-white font-bold text-lg hover:text-primary-500 transition-colors">+7
+                                    (915) 046-26-86</a>
+                            </div>
+                            <div>
+                                <p class="text-neutral-500 text-xs uppercase tracking-wider mb-1">Email</p>
+                                <a href="/cdn-cgi/l/email-protection#9ff6f1f9f0dfe5fbf0edf0e9b2fbf0f2b1edea"
+                                    class="text-white font-bold text-lg hover:text-primary-500 transition-colors"><span
+                                        class="__cf_email__"
+                                        data-cfemail="751c1b131a350f111a071a0358111a185b0700">[email&#160;protected]</span></a>
+                            </div>
+                            <div class="sm:col-span-2">
+                                <p class="text-neutral-500 text-xs uppercase tracking-wider mb-1">Адрес офиса</p>
+                                <p class="text-white">г. Москва, ул. Строителей, д. 15, офис 404</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map (Yandex.Maps) -->
+                    <div class="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+                        <iframe class="absolute inset-0 w-full h-full border-0"
+                            src="https://yandex.ru/map-widget/v1/?ll=37.532000%2C55.706000&z=16&mode=search&text=%D0%B3.%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%2C%20%D0%B4.%2015%2C%20%D0%BE%D1%84%D0%B8%D1%81%20404"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-neutral-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <img src="img/логотип чб англ.png" alt="Zdorov Dom" class="h-16 w-auto">
+                    </div>
+                    <p class="text-neutral-500 text-sm mb-6">Строительная компания полного цикла. Создаем надежные дома
+                        для счастливой жизни с 2012 года.</p>
+                    <div class="flex gap-4 items-center">
+                        <a href="#" aria-label="Telegram"
+                            class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-600 hover:bg-neutral-200 transition-colors">
+                            <img src="img/icons8-телеграм-48.png" alt="" class="w-10 h-10 object-contain">
+                        </a>
+                        <a href="#" aria-label="MAX app"
+                            class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center text-neutral-900 hover:bg-neutral-200 transition-colors">
+                            <img src="img/max-messenger-sign-logo.png" alt="" class="w-9 h-9 object-contain">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-heading font-bold text-neutral-900 mb-6">Компания</h4>
+                    <ul class="space-y-3 text-sm text-neutral-600">
+                        <li><a href="about.html" class="hover:text-primary-600 transition-colors">О нас</a></li>
+                        <li><a href="about.html#team" class="hover:text-primary-600 transition-colors">Команда</a></li>
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Вакансии</a></li>
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Партнерам</a></li>
+                        <li><a href="contacts.html" class="hover:text-primary-600 transition-colors">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-heading font-bold text-neutral-900 mb-6">Услуги</h4>
+                    <ul class="space-y-3 text-sm text-neutral-600">
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Проектирование</a></li>
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Строительство домов</a></li>
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Дизайн интерьера</a></li>
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Ландшафтный дизайн</a></li>
+                        <li><a href="#" class="hover:text-primary-600 transition-colors">Инженерные системы</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacts -->
+                <div>
+                    <h4 class="font-heading font-bold text-neutral-900 mb-6">Контакты</h4>
+                    <ul class="space-y-4 text-sm text-neutral-600">
+                        <li class="flex items-start gap-3">
+                            <!-- Address icon -->
+                            <span class="flex-shrink-0 mt-0.5">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary-600" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 21s-5-5.2-5-9.2A5 5 0 0 1 12 7a5 5 0 0 1 5 4.8C17 15.8 12 21 12 21z" />
+                                    <circle cx="12" cy="11.5" r="1.7" />
+                                </svg>
+                            </span>
+                            <span>г. Москва, ул. Строителей, д. 15, офис 404</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <!-- Phone icon -->
+                            <span class="flex-shrink-0 mt-0.5">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary-600" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M5 4.5 7.5 4A2 2 0 0 1 9.7 5.4l.7 2.3a2 2 0 0 1-.5 1.9L8.8 10.7a11.5 11.5 0 0 0 4.5 4.5l1.1-1.1a2 2 0 0 1 1.9-.5l2.3.7A2 2 0 0 1 19 16.9l-.5 2.5A2 2 0 0 1 16.6 21 15 15 0 0 1 3 7.4 2 2 0 0 1 5 4.5Z" />
+                                </svg>
+                            </span>
+                            <div class="flex flex-col space-y-1">
+                                <a href="tel:+79150462686" class="hover:text-primary-600 transition-colors">+7 (915)
+                                    046-26-86</a>
+                                <a href="tel:+79165946969" class="hover:text-primary-600 transition-colors">+7 (916)
+                                    594-69-69</a>
+                                <a href="tel:+79652884025" class="hover:text-primary-600 transition-colors">+7 (965)
+                                    288-40-25</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <!-- Mail icon -->
+                            <span class="flex-shrink-0">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 text-primary-600" fill="none"
+                                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="4" y="6.5" width="16" height="11" rx="2" />
+                                    <path d="M5.5 8l6.5 4 6.5-4" />
+                                </svg>
+                            </span>
+                            <a href="/cdn-cgi/l/email-protection#21484f474e615b454e534e570c454e4c0f5354"
+                                class="hover:text-primary-600 transition-colors"><span class="__cf_email__"
+                                    data-cfemail="91f8fff7fed1ebf5fee3fee7bcf5fefcbfe3e4">[email&#160;protected]</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-neutral-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-neutral-400 text-xs">© 2024 Zdorov Dom. Все права защищены.</p>
+                <div class="flex gap-6 text-xs text-neutral-400">
+                    <a href="#" class="hover:text-neutral-600 transition-colors">Политика конфиденциальности</a>
+                    <a href="#" class="hover:text-neutral-600 transition-colors">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Simple smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            e.preventDefault();
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+    <!-- ===== QUIZ POPUP ===== -->
+    <style>
+        /* Quiz Modal */
+        #quiz-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+
+        #quiz-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #quiz-modal {
+            background: #fff;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 560px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 30px 80px -10px rgba(15, 23, 42, 0.35);
+            transform: translateY(24px) scale(0.97);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            font-family: 'Inter', sans-serif;
+        }
+
+        #quiz-overlay.active #quiz-modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .quiz-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 28px 32px 24px;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+        }
+
+        .quiz-header .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(249, 115, 22, 0.2);
+            border: 1px solid rgba(249, 115, 22, 0.4);
+            color: #fb923c;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .quiz-header h2 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            color: #fff;
+            line-height: 1.3;
+            margin: 0 0 4px;
+        }
+
+        .quiz-header p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        .quiz-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .quiz-close:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+        }
+
+        /* Progress bar */
+        .quiz-progress-wrap {
+            padding: 0 32px;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .quiz-steps-row {
+            display: flex;
+            gap: 6px;
+            padding: 16px 0;
+        }
+
+        .quiz-step-dot {
+            flex: 1;
+            height: 4px;
+            border-radius: 99px;
+            background: #e2e8f0;
+            transition: background 0.3s;
+        }
+
+        .quiz-step-dot.done {
+            background: #f97316;
+        }
+
+        .quiz-step-dot.active {
+            background: #fb923c;
+        }
+
+        .quiz-progress-label {
+            font-size: 11px;
+            color: #94a3b8;
+            padding-bottom: 10px;
+            font-weight: 500;
+        }
+
+        /* Step body */
+        .quiz-body {
+            padding: 28px 32px 24px;
+        }
+
+        .quiz-step {
+            display: none;
+        }
+
+        .quiz-step.active {
+            display: block;
+            animation: fadeSlideIn 0.3s ease;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .quiz-step h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 17px;
+            color: #0f172a;
+            margin: 0 0 18px;
+            line-height: 1.4;
+        }
+
+        .quiz-step h3 span {
+            color: #f97316;
+        }
+
+        /* Option cards */
+        .quiz-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .quiz-options.cols-1 {
+            grid-template-columns: 1fr;
+        }
+
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .quiz-option:hover {
+            border-color: #fdba74;
+            background: #fff7ed;
+        }
+
+        .quiz-option.selected {
+            border-color: #f97316;
+            background: #fff7ed;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+        }
+
+        .quiz-option-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            transition: background 0.2s;
+        }
+
+        .quiz-option.selected .quiz-option-icon {
+            background: #ffedd5;
+        }
+
+        .quiz-option-text {
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            line-height: 1.3;
+        }
+
+        .quiz-option-sub {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 2px;
+            font-weight: 400;
+        }
+
+        /* Nav buttons */
+        .quiz-nav {
+            display: flex;
+            gap: 10px;
+            margin-top: 24px;
+            align-items: center;
+        }
+
+        .quiz-btn-back {
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            background: transparent;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .quiz-btn-back:hover {
+            border-color: #94a3b8;
+            color: #334155;
+        }
+
+        .quiz-btn-next {
+            flex: 1;
+            padding: 14px 20px;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .quiz-btn-next:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4);
+        }
+
+        .quiz-btn-next:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Final step — contact form */
+        #quiz-step-final .result-banner {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .result-icon-wrap {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .result-title {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 16px;
+            color: #fff;
+            margin: 0 0 4px;
+        }
+
+        .result-sub {
+            font-size: 12px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        .quiz-input-group {
+            margin-bottom: 12px;
+        }
+
+        .quiz-input-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .quiz-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            font-size: 14px;
+            color: #0f172a;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .quiz-input:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+        }
+
+        .quiz-input.error {
+            border-color: #ef4444;
+        }
+
+        .quiz-consent {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 14px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+
+        .quiz-consent input[type=checkbox] {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: #f97316;
+            cursor: pointer;
+        }
+
+        .quiz-consent label {
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .quiz-consent a {
+            color: #f97316;
+            text-decoration: underline;
+        }
+
+        /* Success screen */
+        #quiz-success {
+            display: none;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        #quiz-success.active {
+            display: block;
+            animation: fadeSlideIn 0.4s ease;
+        }
+
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
+        }
+
+        #quiz-success h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            color: #0f172a;
+            margin: 0 0 10px;
+        }
+
+        #quiz-success p {
+            font-size: 14px;
+            color: #64748b;
+            margin: 0 0 24px;
+            line-height: 1.6;
+        }
+
+        .btn-close-success {
+            padding: 14px 36px;
+            border-radius: 8px;
+            border: none;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .btn-close-success:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4);
+        }
+
+        /* Trigger button */
+        #quiz-trigger {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 14px 22px;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0 8px 28px rgba(249, 115, 22, 0.45);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            animation: pulse-ring 3s ease infinite;
+        }
+
+        #quiz-trigger:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 14px 36px rgba(249, 115, 22, 0.5);
+        }
+
+        @keyframes pulse-ring {
+
+            0%,
+            100% {
+                box-shadow: 0 8px 28px rgba(249, 115, 22, 0.45), 0 0 0 0 rgba(249, 115, 22, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 8px 28px rgba(249, 115, 22, 0.45), 0 0 0 10px rgba(249, 115, 22, 0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-body {
+                padding: 20px;
+            }
+
+            .quiz-header {
+                padding: 22px 20px 18px;
+            }
+
+            .quiz-progress-wrap {
+                padding: 0 20px;
+            }
+
+            #quiz-trigger {
+                bottom: 16px;
+                right: 16px;
+                padding: 12px 18px;
+                font-size: 13px;
+            }
+        }
+    </style>
+
+    <!-- Trigger Button -->
+    <button id="quiz-trigger" onclick="openQuiz()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+                d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18" />
+        </svg>
+        Рассчитать стоимость
+    </button>
+
+    <!-- Quiz Overlay -->
+    <div id="quiz-overlay" onclick="handleOverlayClick(event)">
+        <div id="quiz-modal" role="dialog" aria-modal="true" aria-label="Опрос для расчёта стоимости">
+
+            <!-- Header -->
+            <div class="quiz-header">
+                <button class="quiz-close" onclick="closeQuiz()" aria-label="Закрыть">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M18 6 6 18M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="badge">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="#fb923c">
+                        <circle cx="12" cy="12" r="10" />
+                    </svg>
+                    Бесплатный расчёт
+                </div>
+                <h2>Рассчитайте стоимость вашего дома</h2>
+                <p>Ответьте на 4 вопроса — получите точный расчёт за 15 минут</p>
+            </div>
+
+            <!-- Progress -->
+            <div class="quiz-progress-wrap" id="quiz-progress-wrap">
+                <div class="quiz-steps-row" id="quiz-steps-row">
+                    <div class="quiz-step-dot active" id="dot-1"></div>
+                    <div class="quiz-step-dot" id="dot-2"></div>
+                    <div class="quiz-step-dot" id="dot-3"></div>
+                    <div class="quiz-step-dot" id="dot-4"></div>
+                </div>
+                <div class="quiz-progress-label" id="quiz-progress-label">Вопрос 1 из 4</div>
+            </div>
+
+            <!-- Steps container -->
+            <div id="quiz-steps-wrap">
+
+                <!-- Step 1: What to build -->
+                <div class="quiz-body">
+                    <div class="quiz-step active" id="quiz-step-1">
+                        <h3>Что планируете <span>построить?</span></h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-step="1" data-value="Жилой дом" onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Дом -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 11 12 4l8 7" />
+                                        <path d="M6.5 10.5V19h11v-8.5" />
+                                        <path d="M10 19v-4.5h4V19" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Жилой дом</div>
+                                    <div class="quiz-option-sub">Для постоянного проживания</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="1" data-value="Дача / коттедж"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Дача -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 11 11.5 5 18 11" />
+                                        <path d="M7 11.5V18h9v-6.5" />
+                                        <path d="M4 18h16" />
+                                        <path d="M6 8.5 4.5 7M18 8.5 19.5 7" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Дача / коттедж</div>
+                                    <div class="quiz-option-sub">Сезонное использование</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="1" data-value="Баня / хозпостройка"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Баня -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="10" width="16" height="6" rx="2" />
+                                        <path d="M6 10V8.5a2 2 0 0 1 2-2h2" />
+                                        <path d="M8.5 5.5c.8.4 1.2 1 1.2 1.8" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Баня / Гостевой дом</div>
+                                    <div class="quiz-option-sub">Дополнительный объект</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="1" data-value="Коммерческий объект"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Гараж / хозблок -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3.5 11 12 5l8.5 6" />
+                                        <path d="M6 11.5V19h12v-7.5Z" />
+                                        <path d="M8 19v-3.5h8V19" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Гараж / Хозблок с мансардой</div>
+                                    <div class="quiz-option-sub">Офис, магазин, склад</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-nav">
+                            <button class="quiz-btn-next" id="btn-next-1" onclick="nextStep(1)" disabled>
+                                Далее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Construction type -->
+                <div class="quiz-body" style="display:none" id="body-2">
+                    <div class="quiz-step" id="quiz-step-2">
+                        <h3>Какой тип <span>конструкции</span> вам ближе?</h3>
+                        <div class="quiz-options">
+                            <div class="quiz-option" data-step="2" data-value="Кирпич" onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Кирпич -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="8" width="16" height="8" rx="1.5" />
+                                        <path d="M8 8v8M16 8v8" />
+                                        <path d="M4 12h4M12 12h4M18 12h2" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Кирпич</div>
+                                    <div class="quiz-option-sub">Классика и надёжность</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="2" data-value="Дерево / брус"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Брус -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="9" width="16" height="6" rx="1.5" />
+                                        <path d="M6.5 9v6M12 9v6M17.5 9v6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Дерево / брус</div>
+                                    <div class="quiz-option-sub">Экологично и тепло</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="2" data-value="Газоблок / пеноблок"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Блоки -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="9" width="7" height="6" rx="1.4" />
+                                        <rect x="13" y="9" width="7" height="6" rx="1.4" />
+                                        <path d="M7.5 15v3.5M16.5 15v3.5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Газоблок</div>
+                                    <div class="quiz-option-sub">Быстро и экономично</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="2" data-value="SIP-панели / каркас"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Каркас -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="7" width="16" height="10" rx="1.6" />
+                                        <path d="M8 7v10M16 7v10" />
+                                        <path d="M4 11h16" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Каркас</div>
+                                    <div class="quiz-option-sub">Современные технологии</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-nav">
+                            <button class="quiz-btn-back" onclick="prevStep(2)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg> Назад
+                            </button>
+                            <button class="quiz-btn-next" id="btn-next-2" onclick="nextStep(2)" disabled>
+                                Далее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Area and floors -->
+                <div class="quiz-body" style="display:none" id="body-3">
+                    <div class="quiz-step" id="quiz-step-3">
+                        <h3>Какая <span>площадь</span> и этажность предпочтительны?</h3>
+                        <div class="quiz-options cols-1">
+                            <div class="quiz-option" data-step="3" data-value="До 100 м², 1 этаж"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Небольшая площадь -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="5" y="7" width="10" height="10" rx="2" />
+                                        <path d="M9 11h4M9 13.5h2.5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">50-80 м² · 1 этаж</div>
+                                    <div class="quiz-option-sub">Компактный и уютный</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="3" data-value="100–150 м², 1–2 этажа"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Средняя площадь -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4.5" y="7" width="11" height="10" rx="2" />
+                                        <path d="M9 10.5h4.5M9 13.5h3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">80–120 м² · 1–2 этажа</div>
+                                    <div class="quiz-option-sub">Оптимально для семьи</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="3" data-value="150–250 м², 2 этажа"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Большой дом -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4.5 12 12 6l7.5 6" />
+                                        <path d="M7 12.5V19h10v-6.5Z" />
+                                        <path d="M10 14.5h4M10 17h2.3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">120–150 м² · 2 этажа</div>
+                                    <div class="quiz-option-sub">Просторный дом</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="3" data-value="Свыше 250 м², 2+ этажа"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Премиум -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 11.5 12 5l7 6.5" />
+                                        <path d="M7 11.5V19h10v-7.5Z" />
+                                        <path d="M10 11.5V9h4v2.5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Свыше 150 м² · 2 этажа</div>
+                                    <div class="quiz-option-sub">Премиум-строительство</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-nav">
+                            <button class="quiz-btn-back" onclick="prevStep(3)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg> Назад
+                            </button>
+                            <button class="quiz-btn-next" id="btn-next-3" onclick="nextStep(3)" disabled>
+                                Далее <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Timeline -->
+                <div class="quiz-body" style="display:none" id="body-4">
+                    <div class="quiz-step" id="quiz-step-4">
+                        <h3>Когда планируете <span>начать</span> строительство?</h3>
+                        <div class="quiz-options cols-1">
+                            <div class="quiz-option" data-step="4" data-value="В ближайший месяц"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Срочно -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#b91c1c"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M8 5.5C9.5 7 10 8.5 10 10.2c0-2.7 2.2-4.1 3.6-5.7C15.8 6.3 18 8.4 18 11.7A6 6 0 0 1 12 18a6 6 0 0 1-6-6c0-2 1-3.7 2-4.5Z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">В ближайший месяц</div>
+                                    <div class="quiz-option-sub">Готов начать немедленно</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="4" data-value="В этом сезоне (3–6 мес.)"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Календарь -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="6" width="16" height="12" rx="2" />
+                                        <path d="M9 4v3M15 4v3M4 10h16" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">В этом сезоне · 3–6 мес.</div>
+                                    <div class="quiz-option-sub">Планирую заранее</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="4" data-value="Через полгода – год"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Календарь + часы -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3.5" y="5.5" width="11" height="11" rx="2" />
+                                        <path d="M8 5.5v2M10.5 5.5v2M3.5 9.5h11" />
+                                        <circle cx="17.5" cy="14.5" r="3.2" />
+                                        <path d="M17.5 13v1.7l1.3.7" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Через полгода – год</div>
+                                    <div class="quiz-option-sub">Прицениваюсь</div>
+                                </div>
+                            </div>
+                            <div class="quiz-option" data-step="4" data-value="Пока изучаю варианты"
+                                onclick="selectOption(this)">
+                                <div class="quiz-option-icon">
+                                    <!-- Лупа -->
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#0f172a"
+                                        stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="11" cy="11" r="4.5" />
+                                        <path d="m14.5 14.5 3.5 3.5" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quiz-option-text">Пока изучаю варианты</div>
+                                    <div class="quiz-option-sub">На этапе исследования</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quiz-nav">
+                            <button class="quiz-btn-back" onclick="prevStep(4)">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg> Назад
+                            </button>
+                            <button class="quiz-btn-next" id="btn-next-4" onclick="nextStep(4)" disabled>
+                                Получить расчёт <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5">
+                                    <path d="m9 18 6-6-6-6" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Final step: Contact form -->
+                <div class="quiz-body" style="display:none" id="body-final">
+                    <div class="quiz-step" id="quiz-step-final">
+                        <div class="result-banner">
+                            <div class="result-icon-wrap">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 11l3 3L22 4" />
+                                    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="result-title">Ваш расчёт готов! 🎉</div>
+                                <div class="result-sub">Укажите контакты — отправим за 15 минут</div>
+                            </div>
+                        </div>
+
+                        <div class="quiz-input-group">
+                            <label for="q-name">Ваше имя *</label>
+                            <input class="quiz-input" id="q-name" type="text" placeholder="Иван Иванов"
+                                autocomplete="name">
+                        </div>
+                        <div class="quiz-input-group">
+                            <label for="q-email">Email *</label>
+                            <input class="quiz-input" id="q-email" type="email" placeholder="ivan@example.com"
+                                autocomplete="email">
+                        </div>
+                        <div class="quiz-input-group">
+                            <label for="q-phone">Телефон *</label>
+                            <input class="quiz-input" id="q-phone" type="tel" placeholder="+7 (___) ___-__-__"
+                                autocomplete="tel">
+                        </div>
+
+                        <div class="quiz-consent">
+                            <input type="checkbox" id="q-consent">
+                            <label for="q-consent">
+                                Я даю согласие на <a href="#">обработку персональных данных</a> и ознакомлен с <a
+                                    href="#">политикой конфиденциальности</a>. Нажимая «Отправить», вы соглашаетесь с <a
+                                    href="#">условиями использования</a>.
+                            </label>
+                        </div>
+
+                        <div class="quiz-nav" style="margin-top:18px">
+                            <button class="quiz-btn-back" onclick="prevStep('final')">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5">
+                                    <path d="m15 18-6-6 6-6" />
+                                </svg> Назад
+                            </button>
+                            <button class="quiz-btn-next" id="btn-submit" onclick="submitQuiz()">
+                                Отправить расчёт
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round">
+                                    <path d="m22 2-7 20-4-9-9-4Z" />
+                                    <path d="M22 2 11 13" />
+                                </svg>
+                            </button>
+                        </div>
+                        <p id="quiz-form-error" style="color:#ef4444;font-size:12px;margin-top:8px;display:none;">
+                            Пожалуйста, заполните все обязательные поля и дайте согласие.</p>
+                    </div>
+                </div>
+
+            </div><!-- /quiz-steps-wrap -->
+
+            <!-- Success screen -->
+            <div id="quiz-success">
+                <div class="success-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                </div>
+                <h3>Заявка отправлена!</h3>
+                <p>Наш менеджер свяжется с вами в течение <strong>15 минут</strong> и пришлёт детальный расчёт на
+                    указанный email.</p>
+                <button class="btn-close-success" onclick="closeQuiz()">Отлично, спасибо!</button>
+            </div>
+
+        </div><!-- /quiz-modal -->
+    </div><!-- /quiz-overlay -->
+
+    <script>
+        // Quiz state
+        const quizAnswers = {};
+        let currentStep = 1;
+        const TOTAL_STEPS = 4;
+
+        function openQuiz() {
+            document.getElementById('quiz-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeQuiz() {
+            document.getElementById('quiz-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function handleOverlayClick(e) {
+            if (e.target === document.getElementById('quiz-overlay')) closeQuiz();
+        }
+
+        function selectOption(el) {
+            const step = el.dataset.step;
+            document.querySelectorAll(`.quiz-option[data-step="${step}"]`).forEach(o => o.classList.remove('selected'));
+            el.classList.add('selected');
+            quizAnswers[step] = el.dataset.value;
+            const nextBtn = document.getElementById('btn-next-' + step);
+            if (nextBtn) nextBtn.disabled = false;
+        }
+
+        function updateProgress(step) {
+            for (let i = 1; i <= TOTAL_STEPS; i++) {
+                const dot = document.getElementById('dot-' + i);
+                if (!dot) continue;
+                dot.classList.remove('active', 'done');
+                if (i < step) dot.classList.add('done');
+                else if (i === step) dot.classList.add('active');
+            }
+            const label = document.getElementById('quiz-progress-label');
+            if (step <= TOTAL_STEPS) {
+                label.textContent = `Вопрос ${step} из ${TOTAL_STEPS}`;
+            } else {
+                label.textContent = 'Получение расчёта';
+            }
+        }
+
+        function showStep(step) {
+            // Hide all bodies
+            document.querySelectorAll('.quiz-body').forEach(b => b.style.display = 'none');
+            document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+
+            if (step === 'final') {
+                document.getElementById('body-final').style.display = 'block';
+                document.getElementById('quiz-step-final').classList.add('active');
+                // Mark all dots done
+                for (let i = 1; i <= TOTAL_STEPS; i++) {
+                    const dot = document.getElementById('dot-' + i);
+                    dot.classList.remove('active'); dot.classList.add('done');
+                }
+                document.getElementById('quiz-progress-label').textContent = 'Ваш расчёт готов!';
+            } else {
+                const bodyEl = document.getElementById('body-' + step) || document.querySelector('.quiz-body');
+                if (step === 1) {
+                    document.querySelectorAll('.quiz-body')[0].style.display = 'block';
+                    document.getElementById('quiz-step-1').classList.add('active');
+                } else {
+                    document.getElementById('body-' + step).style.display = 'block';
+                    document.getElementById('quiz-step-' + step).classList.add('active');
+                }
+                updateProgress(step);
+            }
+            currentStep = step;
+
+            // Scroll modal to top
+            document.getElementById('quiz-modal').scrollTop = 0;
+        }
+
+        function nextStep(from) {
+            if (from < TOTAL_STEPS) {
+                showStep(from + 1);
+            } else {
+                showStep('final');
+            }
+        }
+
+        function prevStep(from) {
+            if (from === 'final' || from === 5) {
+                showStep(TOTAL_STEPS);
+            } else {
+                showStep(from - 1);
+            }
+        }
+
+        // Phone mask
+        document.addEventListener('DOMContentLoaded', function () {
+            const phoneInput = document.getElementById('q-phone');
+            if (phoneInput) {
+                phoneInput.addEventListener('input', function (e) {
+                    let val = e.target.value.replace(/\D/g, '');
+                    if (val.startsWith('7') || val.startsWith('8')) val = val.slice(1);
+                    let res = '+7';
+                    if (val.length > 0) res += ' (' + val.slice(0, 3);
+                    if (val.length >= 3) res += ') ' + val.slice(3, 6);
+                    if (val.length >= 6) res += '-' + val.slice(6, 8);
+                    if (val.length >= 8) res += '-' + val.slice(8, 10);
+                    e.target.value = res;
+                });
+            }
+
+            // Open quiz when hero CTA is clicked
+            document.querySelectorAll('a[href="#calculate"]').forEach(btn => {
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    openQuiz();
+                });
+            });
+        });
+
+        function submitQuiz() {
+            const name = document.getElementById('q-name').value.trim();
+            const email = document.getElementById('q-email').value.trim();
+            const phone = document.getElementById('q-phone').value.trim();
+            const consent = document.getElementById('q-consent').checked;
+            const errEl = document.getElementById('quiz-form-error');
+
+            // Validation
+            let valid = true;
+            [document.getElementById('q-name'), document.getElementById('q-email'), document.getElementById('q-phone')].forEach(input => {
+                input.classList.remove('error');
+                if (!input.value.trim()) { input.classList.add('error'); valid = false; }
+            });
+            if (!consent) valid = false;
+
+            if (!valid) { errEl.style.display = 'block'; return; }
+            errEl.style.display = 'none';
+
+            // Simulate submission
+            console.log('Quiz data:', { answers: quizAnswers, name, email, phone });
+
+            // Show success
+            document.getElementById('quiz-steps-wrap').style.display = 'none';
+            document.getElementById('quiz-progress-wrap').style.display = 'none';
+            document.getElementById('quiz-success').classList.add('active');
+        }
+    </script>
+
+    <!-- ===== CALLBACK POPUP ===== -->
+    <style>
+        #cb-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9998;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #cb-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #cb-modal {
+            background: #fff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 32px 80px -10px rgba(15, 23, 42, 0.3);
+            transform: translateY(20px) scale(0.97);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        #cb-overlay.active #cb-modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .cb-top {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 32px 32px 28px;
+            position: relative;
+            text-align: center;
+        }
+
+        .cb-top-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4);
+            animation: cb-ring 2.5s ease infinite;
+        }
+
+        @keyframes cb-ring {
+
+            0%,
+            100% {
+                box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4), 0 0 0 0 rgba(249, 115, 22, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4), 0 0 0 10px rgba(249, 115, 22, 0);
+            }
+        }
+
+        .cb-top h2 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            color: #fff;
+            margin: 0 0 8px;
+            line-height: 1.3;
+        }
+
+        .cb-top p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .cb-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.08);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .cb-close:hover {
+            background: rgba(255, 255, 255, 0.16);
+            color: #fff;
+        }
+
+        .cb-body {
+            padding: 28px 32px 32px;
+        }
+
+        .cb-input-group {
+            margin-bottom: 14px;
+        }
+
+        .cb-input-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+        }
+
+        .cb-input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 16px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            font-size: 14px;
+            color: #0f172a;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+        }
+
+        .cb-input:focus {
+            border-color: #f97316;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+            background: #fff;
+        }
+
+        .cb-input.error {
+            border-color: #ef4444;
+            background: #fff5f5;
+        }
+
+        .cb-time-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 18px;
+        }
+
+        .cb-time-btn {
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            background: #f8fafc;
+            color: #475569;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cb-time-btn:hover {
+            border-color: #fdba74;
+            background: #fff7ed;
+            color: #ea580c;
+        }
+
+        .cb-time-btn.selected {
+            border-color: #f97316;
+            background: #fff7ed;
+            color: #ea580c;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        }
+
+        .cb-consent {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-bottom: 18px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cb-consent input[type=checkbox] {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: #f97316;
+            cursor: pointer;
+        }
+
+        .cb-consent label {
+            font-size: 11px;
+            color: #64748b;
+            line-height: 1.55;
+            cursor: pointer;
+        }
+
+        .cb-consent a {
+            color: #f97316;
+            text-decoration: underline;
+        }
+
+        .cb-submit {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(249, 115, 22, 0.35);
+            transition: transform 0.15s, box-shadow 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .cb-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.45);
+        }
+
+        .cb-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .cb-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        #cb-form-error {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        /* Success */
+        #cb-success {
+            display: none;
+            padding: 40px 32px;
+            text-align: center;
+        }
+
+        #cb-success.active {
+            display: block;
+            animation: fadeSlideIn 0.4s ease;
+        }
+
+        .cb-success-icon {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.35);
+        }
+
+        #cb-success h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 22px;
+            color: #0f172a;
+            margin: 0 0 10px;
+        }
+
+        #cb-success p {
+            font-size: 14px;
+            color: #64748b;
+            margin: 0 0 24px;
+            line-height: 1.6;
+        }
+
+        .cb-btn-ok {
+            padding: 13px 36px;
+            border-radius: 10px;
+            border: none;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #fff;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.3);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+
+        .cb-btn-ok:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 28px rgba(249, 115, 22, 0.4);
+        }
+
+        @media(max-width:480px) {
+            .cb-top {
+                padding: 24px 20px 20px;
+            }
+
+            .cb-body {
+                padding: 22px 20px 26px;
+            }
+
+            .cb-time-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+
+    <!-- Callback Overlay -->
+    <div id="cb-overlay" onclick="handleCbOverlay(event)">
+        <div id="cb-modal" role="dialog" aria-modal="true" aria-label="Заказать обратный звонок">
+
+            <!-- Top banner -->
+            <div class="cb-top">
+                <button class="cb-close" onclick="closeCallback()" aria-label="Закрыть">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <path d="M18 6 6 18M6 6l12 12" />
+                    </svg>
+                </button>
+                <div class="cb-top-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                </div>
+                <h2>Закажите обратный звонок</h2>
+                <p>Перезвоним в течение <strong style="color:#fb923c">15 минут</strong> и ответим<br>на все вопросы
+                    бесплатно</p>
+            </div>
+
+            <!-- Form -->
+            <div id="cb-form-wrap" class="cb-body">
+                <div class="cb-input-group">
+                    <label for="cb-name">Ваше имя</label>
+                    <input class="cb-input" id="cb-name" type="text" placeholder="Иван Иванов" autocomplete="name">
+                </div>
+                <div class="cb-input-group">
+                    <label for="cb-phone">Номер телефона *</label>
+                    <input class="cb-input" id="cb-phone" type="tel" placeholder="+7 (___) ___-__-__"
+                        autocomplete="tel">
+                </div>
+
+                <div class="cb-input-group">
+                    <label>Удобное время для звонка</label>
+                    <div class="cb-time-row">
+                        <button class="cb-time-btn" onclick="selectTime(this)" data-val="9:00–12:00">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-right:6px;vertical-align:middle;">
+                                <circle cx="12" cy="12" r="7" />
+                                <path d="M12 9v3.5L14 14" />
+                            </svg>
+                            9:00 – 12:00
+                        </button>
+                        <button class="cb-time-btn" onclick="selectTime(this)" data-val="12:00–15:00">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-right:6px;vertical-align:middle;">
+                                <circle cx="12" cy="12" r="7" />
+                                <path d="M12 8.5v4L15 14" />
+                            </svg>
+                            12:00 – 15:00
+                        </button>
+                        <button class="cb-time-btn" onclick="selectTime(this)" data-val="15:00–18:00">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-right:6px;vertical-align:middle;">
+                                <circle cx="12" cy="12" r="7" />
+                                <path d="M12 8.5v4.3L14.5 14.5" />
+                            </svg>
+                            15:00 – 18:00
+                        </button>
+                        <button class="cb-time-btn" onclick="selectTime(this)" data-val="18:00–21:00">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                style="margin-right:6px;vertical-align:middle;">
+                                <circle cx="12" cy="12" r="7" />
+                                <path d="M12 8.5v4.3L15.2 15" />
+                            </svg>
+                            18:00 – 21:00
+                        </button>
+                    </div>
+                </div>
+
+                <div class="cb-consent">
+                    <input type="checkbox" id="cb-consent">
+                    <label for="cb-consent">
+                        Нажимая «Перезвоните мне», я соглашаюсь с <a href="#">политикой конфиденциальности</a> и даю
+                        согласие на <a href="#">обработку персональных данных</a>.
+                    </label>
+                </div>
+
+                <button class="cb-submit" onclick="submitCallback()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.07 12 19.79 19.79 0 0 1 1 3.18 2 2 0 0 1 2.96 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    Перезвоните мне
+                </button>
+                <p id="cb-form-error">Пожалуйста, укажите номер телефона и дайте согласие.</p>
+
+                <div class="cb-trust">
+                    <div class="cb-trust-item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        Без спама
+                    </div>
+                    <div class="cb-trust-item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        Ежедневно 9:00–21:00
+                    </div>
+                    <div class="cb-trust-item">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2.5">
+                            <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        Бесплатно
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success screen -->
+            <div id="cb-success">
+                <div class="cb-success-icon">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <path d="M20 6 9 17l-5-5" />
+                    </svg>
+                </div>
+                <h3>Ждите звонка!</h3>
+                <p>Мы получили вашу заявку и перезвоним<br>в течение <strong>15 минут</strong>.</p>
+                <button class="cb-btn-ok" onclick="closeCallback()">Отлично, спасибо!</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let cbSelectedTime = '';
+
+        function openCallback() {
+            document.getElementById('cb-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeCallback() {
+            document.getElementById('cb-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function handleCbOverlay(e) {
+            if (e.target === document.getElementById('cb-overlay')) closeCallback();
+        }
+        function selectTime(el) {
+            document.querySelectorAll('.cb-time-btn').forEach(b => b.classList.remove('selected'));
+            el.classList.add('selected');
+            cbSelectedTime = el.dataset.val;
+        }
+
+        // Phone mask for callback
+        document.addEventListener('DOMContentLoaded', function () {
+            const ph = document.getElementById('cb-phone');
+            if (ph) {
+                ph.addEventListener('input', function (e) {
+                    let val = e.target.value.replace(/\D/g, '');
+                    if (val.startsWith('7') || val.startsWith('8')) val = val.slice(1);
+                    let res = '+7';
+                    if (val.length > 0) res += ' (' + val.slice(0, 3);
+                    if (val.length >= 3) res += ') ' + val.slice(3, 6);
+                    if (val.length >= 6) res += '-' + val.slice(6, 8);
+                    if (val.length >= 8) res += '-' + val.slice(8, 10);
+                    e.target.value = res;
+                });
+            }
+
+            // Hook "Получить консультацию" button in contact section
+            document.querySelectorAll('[data-cb-trigger], button.cb-open').forEach(btn => {
+                btn.addEventListener('click', openCallback);
+            });
+        });
+
+        function submitCallback() {
+            const phone = document.getElementById('cb-phone').value.trim();
+            const consent = document.getElementById('cb-consent').checked;
+            const errEl = document.getElementById('cb-form-error');
+            const phoneInput = document.getElementById('cb-phone');
+
+            phoneInput.classList.remove('error');
+            if (!phone || phone.length < 5 || !consent) {
+                phoneInput.classList.add('error');
+                errEl.style.display = 'block';
+                return;
+            }
+            errEl.style.display = 'none';
+
+            const name = document.getElementById('cb-name').value.trim();
+            console.log('Callback request:', { name, phone, time: cbSelectedTime });
+
+            document.getElementById('cb-form-wrap').style.display = 'none';
+            document.getElementById('cb-success').classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
